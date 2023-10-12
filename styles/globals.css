@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {}
+
+/* 이 클래스는 요소가 나타날 때 위에서 아래로 슬라이딩되도록 설정합니다. */
+.slide-down-enter {
+  opacity: 0;
+  transform: translateY(-50px);
+  /* 초기 위치를 설정합니다. */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 이 클래스는 요소가 사라질 때 위에서 아래로 슬라이딩되도록 설정합니다. */
+.slide-down-exit {
+  opacity: 1;
+  transform: translateY(0);
+  /* 최종 위치를 설정합니다. */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
